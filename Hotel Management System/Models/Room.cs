@@ -19,7 +19,7 @@ namespace Hotel_Management_System.Models
         public required string Status { get; set; } // Vacant, Occupied, Under Maintenance
 
         [Required]
-        [Column(TypeName = "decimal(10,2)")] 
+        [Column(TypeName = "decimal(10,2)")]
         public decimal PricePerNight { get; set; }
 
 
@@ -27,3 +27,4 @@ namespace Hotel_Management_System.Models
         public virtual List<Booking>? Bookings { get; set; }
     }
 }
+

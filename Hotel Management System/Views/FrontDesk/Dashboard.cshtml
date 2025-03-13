@@ -4,6 +4,9 @@
 
 @if (User.IsInRole("Admin") || User.IsInRole("FrontDesk"))
 {
+    <!-- Button to view pending bookings -->
+    <a href="@Url.Action("DashboardBooking", "FrontDesk")" class="btn btn-warning mb-3">View Pending Bookings</a>
+
     @if (Model.Any())
     {
         <table class="table">
@@ -18,7 +21,7 @@
                     <th>Status</th>
                 </tr>
             </thead>
-            <tbody>     
+            <tbody>
                 @foreach (var booking in Model)
                 {
                     <tr>
